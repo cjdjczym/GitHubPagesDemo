@@ -808,6 +808,8 @@ function update_plot() {
 
     file_path = "static/data/" + menu + "/" + data_name + ".json";
 
+    console.log(file_path);
+
     d3.json(file_path).then(function (data_points) {
         if (has_upload == 1) data_handle_upload();
         else if (algorithm == "Original") data_handle_original(data_points);
